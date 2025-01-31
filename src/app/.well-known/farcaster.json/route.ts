@@ -5,11 +5,13 @@ export async function GET() {
 
   const config = {
     accountAssociation: {
-      header:
-        "eyJmaWQiOjM2MjEsInR5cGUiOiJjdXN0b2R5Iiwia2V5IjoiMHgyY2Q4NWEwOTMyNjFmNTkyNzA4MDRBNkVBNjk3Q2VBNENlQkVjYWZFIn0",
-      payload: "eyJkb21haW4iOiJmcmFtZXMtdjIudmVyY2VsLmFwcCJ9",
-      signature:
-        "MHhiNDIwMzQ1MGZkNzgzYTExZjRiOTllZTFlYjA3NmMwOTdjM2JkOTY1NGM2ODZjYjkyZTAyMzk2Y2Q0YjU2MWY1MjY5NjI5ZGQ5NTliYjU0YzEwOGI4OGVmNjdjMTVlZTdjZDc2YTRiMGU5NzkzNzA3YzkxYzFkOWFjNTg0YmQzNjFi",
+      message: {
+        domain: "fartboard-memes.vercel.app",
+        timestamp: 1738361436,
+        expirationTime: 1746137436
+      },
+      signature: "56baa8c16d58285e80fbaa5913fa7c84a22ef2964790e81436628e6d7bbfbbca1f9688ac717929b1d64b414a07acdfe76e73ce67377d4241ecad09e5d0cea99d1b",
+      signingKey: "1073c1c66258865785f072715dab4dbd4ae552b9014d150ff661b6d367e9aab5"
     },
     frame: {
       version: "1",
