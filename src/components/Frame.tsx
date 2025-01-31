@@ -17,8 +17,8 @@ import { createStore } from "mipd";
 import { Label } from "~/components/ui/label";
 import { PROJECT_TITLE } from "~/lib/constants";
 
-import { playSound } from '~/lib/sounds';
-import { SOUND_TYPES } from '~/lib/constants';
+import { playSound } from '../lib/sounds';
+import { SOUND_TYPES } from '../lib/constants';
 
 function SoundButton({ sound, label }: { sound: keyof typeof SOUND_TYPES; label: string }) {
   return (
