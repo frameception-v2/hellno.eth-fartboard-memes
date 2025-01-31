@@ -17,13 +17,13 @@ import { createStore } from "mipd";
 import { Label } from "~/components/ui/label";
 import { PROJECT_TITLE } from "~/lib/constants";
 
-import { playSound } from 'fartjs';
-import { FART_SOUNDS } from '~/lib/constants';
+import { playSound } from '~/lib/sounds';
+import { SOUND_TYPES } from '~/lib/constants';
 
-function SoundButton({ sound, label }: { sound: keyof typeof FART_SOUNDS; label: string }) {
+function SoundButton({ sound, label }: { sound: keyof typeof SOUND_TYPES; label: string }) {
   return (
     <PurpleButton
-      onClick={() => playSound(FART_SOUNDS[sound])}
+      onClick={() => playSound(SOUND_TYPES[sound])}
       className="w-full mb-2"
     >
       {label}
