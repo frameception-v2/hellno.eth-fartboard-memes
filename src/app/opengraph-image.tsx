@@ -14,8 +14,13 @@ export default async function Image() {
     (
       <div tw="h-full w-full flex flex-col justify-center items-center relative bg-purple-100">
         <div tw="flex flex-col items-center bg-white rounded-xl p-8 shadow-lg">
-          <h1 tw="text-6xl font-bold text-purple-600 mb-4">{PROJECT_TITLE}</h1>
+          <h1 tw="text-6xl font-bold text-purple-600 mb-4">💨 {PROJECT_TITLE}</h1>
           <h3 tw="text-2xl text-gray-600 text-center">{PROJECT_DESCRIPTION}</h3>
+          <div tw="flex gap-4 mt-4">
+            <span tw="text-4xl">🎵</span>
+            <span tw="text-4xl">🔊</span>
+            <span tw="text-4xl">🎶</span>
+          </div>
         </div>
       </div>
     ),

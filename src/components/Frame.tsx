@@ -17,19 +17,34 @@ import { createStore } from "mipd";
 import { Label } from "~/components/ui/label";
 import { PROJECT_TITLE } from "~/lib/constants";
 
-function ExampleCard() {
+import { playSound } from 'fartjs';
+import { FART_SOUNDS } from '~/lib/constants';
+
+function SoundButton({ sound, label }: { sound: keyof typeof FART_SOUNDS; label: string }) {
+  return (
+    <PurpleButton
+      onClick={() => playSound(FART_SOUNDS[sound])}
+      className="w-full mb-2"
+    >
+      {label}
+    </PurpleButton>
+  );
+}
+
+function FartboardCard() {
   return (
     <Card className="border-neutral-200 bg-white">
       <CardHeader>
-        <CardTitle className="text-neutral-900">Welcome to the Frame Template</CardTitle>
+        <CardTitle className="text-neutral-900">🎵 Fartboard</CardTitle>
         <CardDescription className="text-neutral-600">
-          This is an example card that you can customize or remove
+          Click a button to play a sound!
         </CardDescription>
       </CardHeader>
-      <CardContent className="text-neutral-800">
-        <p>
-          Your frame content goes here. The text is intentionally dark to ensure good readability.
-        </p>
+      <CardContent className="text-neutral-800 grid grid-cols-2 gap-2">
+        <SoundButton sound="short" label="Short 💨" />
+        <SoundButton sound="long" label="Long 🌪️" />
+        <SoundButton sound="wet" label="Wet 💦" />
+        <SoundButton sound="squeaky" label="Squeaky 🐭" />
       </CardContent>
     </Card>
   );
@@ -137,7 +152,7 @@ export default function Frame(
     >
       <div className="w-[300px] mx-auto py-2 px-2">
         <h1 className="text-2xl font-bold text-center mb-4 text-neutral-900">{title}</h1>
-        <ExampleCard />
+        <FartboardCard />
       </div>
     </div>
   );
