@@ -1,3 +1,3 @@
-export const PROJECT_ID = 'farcaster-frames-template';
-export const PROJECT_TITLE = "Farcaster Frames Template";
-export const PROJECT_DESCRIPTION = "A Farcaster Frames v2 Template by hellno";
+export const PROJECT_ID = 'fartboard-memes';
+export const PROJECT_TITLE = "fartboard-memes";
+export const PROJECT_DESCRIPTION = "Share and discover the dankest memes on Farcaster";
